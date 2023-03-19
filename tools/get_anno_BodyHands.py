@@ -80,8 +80,8 @@ def get_full_new_annotations(imgs_root, anno_path, split_txt, save_imgs, debug=F
         img_name_new = img_name[:-4] + "_" + image_id + ".jpg"  # embed the image_id in new img_name
         imgs_dict["file_name"] = img_name_new  # the new img_name should also been updated in the imgs_dict
         img_path_dst = os.path.join(save_imgs, img_name_new)
-        # shutil.copy(img_path_src, img_path_dst)
-        os.system("ln -s %s %s"%(img_path_src, img_path_dst))  # save soft-link of source image path
+        shutil.copy(img_path_src, img_path_dst)
+        # os.system("ln -s %s %s"%(img_path_src, img_path_dst))  # save soft-link of source image path
         
         if debug:
             img = cv2.imread(img_path_src)
@@ -190,7 +190,7 @@ def get_full_new_annotations(imgs_root, anno_path, split_txt, save_imgs, debug=F
     
 if __name__ == '__main__':
 
-    dataset_root_path = "/datasdc/zhouhuayi/dataset/BodyHands/"
+    dataset_root_path = "dataset/BodyHands/"
     
     imgs_root = os.path.join(dataset_root_path, "VOC2007/JPEGImages")
     anno_path = os.path.join(dataset_root_path, "VOC2007/Annotations")

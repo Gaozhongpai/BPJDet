@@ -214,7 +214,7 @@ def get_full_new_annotations(anno_path, imgs_root, save_imgs, rm_ignore=False, d
 
 if __name__ == '__main__':
     
-    dataset_root_path = "/datasdc/zhouhuayi/dataset/"
+    dataset_root_path = "dataset/"
     
     imgs_root_train = os.path.join(dataset_root_path, "CrowdHuman/yolov5_format/images/train")  # 15000
     imgs_root_val = os.path.join(dataset_root_path, "CrowdHuman/yolov5_format/images/val")  # 4370
