@@ -1,0 +1,7 @@
+coco
+dataset
+debug*
+.vscode
+__pycache__
+runs
+weights
