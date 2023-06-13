@@ -112,7 +112,7 @@ def convert_to_get_val_bh(anno_path, anno_path_bf):
 
 if __name__ == '__main__':
     
-    dataset_root_path = "/datasdc/zhouhuayi/dataset/"
+    dataset_root_path = "dataset/"
     
     # already provided
     anno_path_val = os.path.join(dataset_root_path, "CityPersons/BFJDet/instances_val_bhfmatch_new.json")

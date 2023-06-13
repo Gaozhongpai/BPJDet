@@ -37,6 +37,8 @@ def get_full_new_annotations(anno_path, imgs_root, save_imgs, rm_ignore=False, d
     anno_new_dict_face['images'] = []
     anno_new_dict_face['annotations'] = []
 
+    left_images_count = [0, 0, 0]  # for person, head and face
+
     anno_dict = json.load(open(anno_path, "r"))
     
     imgs_dict_list = anno_dict['images']
@@ -186,10 +188,10 @@ def get_full_new_annotations(anno_path, imgs_root, save_imgs, rm_ignore=False, d
 
 if __name__ == '__main__':
     
-    dataset_root_path = "/datasdc/zhouhuayi/dataset/"
+    dataset_root_path = "dataset/"
     
-    imgs_root_train = os.path.join(dataset_root_path, "domain_adaptation/CityScapes/leftImg8bit/train")
-    imgs_root_val = os.path.join(dataset_root_path, "domain_adaptation/CityScapes/leftImg8bit/val")
+    imgs_root_train = os.path.join(dataset_root_path, "CityPersons/leftImg8bit/train")
+    imgs_root_val = os.path.join(dataset_root_path, "CityPersons/leftImg8bit/val")
     anno_path_train = os.path.join(dataset_root_path, "CityPersons/BFJDet/instances_train_bhfmatch_new.json")
     anno_path_val = os.path.join(dataset_root_path, "CityPersons/BFJDet/instances_val_bhfmatch_new.json")
 

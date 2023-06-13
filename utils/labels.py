@@ -119,7 +119,7 @@ def write_yolov5_labels(data):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', default='data/coco.yaml')
+    parser.add_argument('--data', default='data/JointBP_CrowdHuman_face.yaml')
     args = parser.parse_args()
 
     assert osp.isfile(args.data), 'Data config file not found at {}'.format(args.data)

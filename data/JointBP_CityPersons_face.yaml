@@ -1,6 +1,6 @@
 
 # train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
-path: /datasdc/zhouhuayi/dataset/CityPersons/
+path: dataset/CityPersons/
 labels: yolov5_style_face
 train: yolov5_style_face/img_txt/train.txt
 val: yolov5_style_face/img_txt/val.txt
