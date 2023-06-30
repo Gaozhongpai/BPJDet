@@ -223,12 +223,12 @@ def get_full_new_annotations(imgs_root, anno_path, save_imgs, debug=False):
  
 if __name__ == '__main__':
 
-    dataset_root_path = "/datasdc/zhouhuayi/dataset/coco/"
+    dataset_root_path = "/code/dataset/coco/"
     
     imgs_root_train = os.path.join(dataset_root_path, "images/train2017")
     imgs_root_val = os.path.join(dataset_root_path, "images/val2017")
-    anno_path_train = os.path.join(dataset_root_path, "annotations_HumanParts/person_humanparts_train2017.json")
-    anno_path_val = os.path.join(dataset_root_path, "annotations_HumanParts/person_humanparts_val2017.json")
+    anno_path_train = os.path.join(dataset_root_path, "annotations/COCOHumanParts/person_humanparts_train2017.json")
+    anno_path_val = os.path.join(dataset_root_path, "annotations/COCOHumanParts/person_humanparts_val2017.json")
     
     if not os.path.exists(os.path.join(dataset_root_path, "JointBodyPart")):
         os.mkdir(os.path.join(dataset_root_path, "JointBodyPart"))

@@ -5,3 +5,4 @@ debug*
 __pycache__
 runs
 weights
+test_imgs
